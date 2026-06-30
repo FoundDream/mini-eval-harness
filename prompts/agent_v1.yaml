@@ -1,0 +1,33 @@
+id: agent_v1
+version: "1.0"
+task: agent
+description: Tool-calling agent step prompt with JSON-only output contract.
+variables:
+  - task_id
+  - instruction
+  - tool_descriptions
+  - step_count
+  - trajectory
+template: |
+  AGENT_EVAL_DEMO
+  Task id: {task_id}
+
+  Instruction:
+  {instruction}
+
+  Allowed tools:
+  {tool_descriptions}
+
+  Completed steps: {step_count}
+
+  Trajectory so far:
+  {trajectory}
+
+  Return exactly one JSON object.
+  To call a tool:
+  {{"thought": "brief reason", "tool": "tool_name", "args": {{"key": "value"}}}}
+
+  To finish:
+  {{"thought": "brief reason", "final_answer": "short completion summary"}}
+
+  Do not include markdown fences or extra text.

@@ -1,0 +1,13 @@
+id: gsm8k_v1
+version: "1.0"
+task: gsm8k
+description: Grade-school math word problem with #### final answer format.
+variables:
+  - question
+template: |
+  Solve the following grade school math word problem.
+
+  Question:
+  {question}
+
+  Show brief reasoning, then put the final numeric answer after "####".

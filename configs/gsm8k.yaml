@@ -2,7 +2,7 @@ task:
   type: qa
 
 dataset: data/gsm8k_test_50.jsonl
-prompt: prompts/gsm8k_v1.txt
+prompt: prompts/gsm8k_v1.yaml
 results_dir: results
 reports_dir: reports
 run_id: gsm8k

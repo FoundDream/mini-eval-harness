@@ -1,0 +1,12 @@
+id: qa_v1
+version: "1.0"
+task: qa
+description: 中文单轮问答，要求只输出答案。
+variables:
+  - question
+template: |
+  请回答下面的问题。
+
+  问题：{question}
+
+  请只输出答案，不要解释。

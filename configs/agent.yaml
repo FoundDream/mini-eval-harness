@@ -2,7 +2,7 @@ task:
   type: agent
 
 dataset: data/agent_tasks.jsonl
-prompt: prompts/agent_v1.txt
+prompt: prompts/agent_v1.yaml
 results_dir: results
 reports_dir: reports
 run_id: agent_deepseek

@@ -121,7 +121,7 @@ src/mini_eval_harness/
 configs/             # runnable eval configs
 data/                # demo datasets
 docs/rag_demo/       # small RAG knowledge base
-prompts/             # prompt templates
+prompts/             # YAML prompt specs (id, version, template)
 ```
 
 ## Checks

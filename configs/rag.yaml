@@ -2,7 +2,7 @@ task:
   type: rag_qa
 
 dataset: data/rag_qa.jsonl
-prompt: prompts/rag_qa_v1.txt
+prompt: prompts/rag_qa_v1.yaml
 results_dir: results
 reports_dir: reports
 run_id: rag_deepseek

@@ -12,7 +12,7 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "type": "qa",
     },
     "dataset": "data/demo_qa.jsonl",
-    "prompt": "prompts/qa_v1.txt",
+    "prompt": "prompts/qa_v1.yaml",
     "results_dir": "results",
     "reports_dir": "reports",
     "run_id": None,

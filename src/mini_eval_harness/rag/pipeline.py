@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any
 
 from mini_eval_harness.model_adapter import ModelAdapter
+from mini_eval_harness.prompt_loader import load_prompt
 from mini_eval_harness.rag.chunker import TextChunker
 from mini_eval_harness.rag.document_loader import MarkdownDocumentLoader
 from mini_eval_harness.rag.retriever import BM25Retriever, RetrievedChunk
@@ -21,9 +22,8 @@ class RAGRunOutput:
 class RAGPromptBuilder:
     def __init__(self, template_path: str | Path) -> None:
         self.template_path = Path(template_path)
-        if not self.template_path.exists():
-            raise FileNotFoundError(f"RAG prompt template not found: {self.template_path}")
-        self.template = self.template_path.read_text(encoding="utf-8")
+        self.spec = load_prompt(self.template_path)
+        self.template = self.spec.template
 
     def build(self, question: str, contexts: list[RetrievedChunk]) -> str:
         formatted_contexts = "\n\n".join(

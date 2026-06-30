@@ -1,6 +1,0 @@
-Solve the following grade school math word problem.
-
-Question:
-{question}
-
-Show brief reasoning, then put the final numeric answer after "####".
