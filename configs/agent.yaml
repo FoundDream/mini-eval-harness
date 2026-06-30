@@ -1,0 +1,24 @@
+task:
+  type: agent
+
+dataset: data/agent_tasks.jsonl
+prompt: prompts/agent_v1.txt
+results_dir: results
+reports_dir: reports
+run_id: agent_deepseek
+
+agent:
+  max_steps: 6
+
+model:
+  provider: openai
+  name: deepseek-v4-flash
+  api_key_env: DEEPSEEK_API_KEY
+  base_url: https://api.deepseek.com
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 512
+  timeout_seconds: 120.0
+  extra_body:
+    thinking:
+      type: disabled

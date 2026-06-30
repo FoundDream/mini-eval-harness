@@ -1,0 +1,17 @@
+task:
+  type: qa
+
+dataset: data/demo_qa.jsonl
+prompt: prompts/qa_v1.txt
+results_dir: results
+reports_dir: reports
+run_id: mock_smoke
+
+model:
+  provider: mock
+  name: null
+  temperature: 0.0
+  max_tokens: 32
+
+scorer:
+  type: exact_match
